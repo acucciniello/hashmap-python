@@ -2,8 +2,9 @@ from node import Node
 
 # A Linked List of Node Objects
 class LinkedList(object):
+
   # head = pointer to the first Node in the Linked List
-  # current = pointer to current Node in list, used when Traversing list
+  # current = pointer to current Node in list, used when Traversing Linked List
   def __init__(self):
     self.head = None
     self.current = None
@@ -55,7 +56,6 @@ class LinkedList(object):
 
   # Removes a Node from the Linked List with the given value
   # value = Data of the Node object you would like to remove from the Linked List
-
   def remove(self, value):
     previous = None
     self.current = self.head

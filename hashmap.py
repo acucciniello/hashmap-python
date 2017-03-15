@@ -3,7 +3,7 @@ from linkedlist import LinkedList
 # A Hashmap that uses LinkedLists to handle collisions (chaining)
 class Hashmap(object):
 
-  # Creates a List of LinkedList objects with given length and stores length
+  # Creates a Hashmap that contains a List of LinkedList objects with given length and stores length
   # buckets = list of Linked List Objects
   # length = length of the bucket list
   def __init__(self, length=100):
@@ -15,12 +15,12 @@ class Hashmap(object):
 
   # Calculates the key to find a location in the Hashmap for a Node
   # data = the data of the Node given for insertion or removal
-  # Returns key = location of LinkedList to insert or remove node 
+  # Returns: key = location of LinkedList to insert or remove a Node 
   def hashFunction(self, data):
     key = data % self.length + 1
     return key
 
-  # Places a Node in a Linked List based off the key
+  # Places a Node in a Hashmap based off the key
   # Gets the key to find out where to place the Node
   # Then adds Node to that LinkedList
   def insert(self, node):

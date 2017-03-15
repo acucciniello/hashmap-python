@@ -41,7 +41,7 @@ class TestLinkedListMethods(TestCaseLinkedList):
     self.assertEqual(self.linkedlist.head, None)
 
   def test_len(self):
-    # empty LL returns 0 for length
+    # empty Linked List returns 0 for length
     self.assertEqual(len(self.linkedlist), 0)
 
     # List with elements returns correct length
@@ -51,13 +51,13 @@ class TestLinkedListMethods(TestCaseLinkedList):
     self.assertEqual(len(self.linkedlist), 20)
 
   def test_push(self):
-    # Adds element to an Empty List
+    # Adds element to an Empty Linked List
     node = Node(3)
     output = self.linkedlist.push(node)
   
     self.assertEqual(repr(output), "<Node key: None data: 3>")
 
-    # Adds element to end of LinkedList with items already
+    # Adds element to end of Linked List with items already
     for i in range(7):
       node = Node(i)
       output = self.linkedlist.push(node)
@@ -132,7 +132,7 @@ class TestHashmapMethods(TestCaseHashMap):
     outputRemove = self.hashmap.remove(5)
     self.assertEqual(outputRemove, 'Node with the value: 5 was removed from the LinkedList')
 
-    #removes node from Linked List at specified key with multiple elements
+    # removes node from Linked List at specified key with multiple elements
     node = Node(205)
     self.hashmap.insert(node)
     node = Node(305)

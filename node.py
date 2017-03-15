@@ -9,6 +9,6 @@ class Node(object):
     self.next = None
   def __repr__(self):
     if self.key != None:
-      return "<Node key: %d value: %d>" % (self.key, self.data)
+      return "<Node key: %d data: %d>" % (self.key, self.data)
     else:
-        return "<Node key: %s value: %d>" % (self.key, self.data)
+        return "<Node key: %s data: %d>" % (self.key, self.data)

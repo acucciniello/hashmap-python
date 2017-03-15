@@ -46,10 +46,8 @@ class LinkedList(object):
     previous = None
     self.current = self.head
     if self.current is None:
-      return 'Node is not in empty LinkedList'
+      return 'Linked List is empty, value of: %d is not here' % value
     else:
-      print self.current
-      print self.current.next
       while self.current != None:
         if self.current.data == value:
           previous.next = self.current.next
@@ -59,6 +57,4 @@ class LinkedList(object):
           previous = self.current
           self.current = self.current.next
       return 'Node is not in LinkedList'
-
       
-

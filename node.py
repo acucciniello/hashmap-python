@@ -1,6 +1,6 @@
 class Node(object):
   # a Basic Node for each element in the Hashmap:
-  # key - index in the Hashmap
+  # key = index in the Hashmap
   # data = numeric data of Node
   # next = points to the next element in the Linked List
   def __init__(self, data):

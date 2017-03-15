@@ -1,11 +1,10 @@
-from node import Node
 from linkedlist import LinkedList
 
 class Hashmap(object):
 
   def __init__(self, length=100):
     listBuckets = []
-    for i in range(100):
+    for i in range(length):
       listBuckets.append(LinkedList())
     self.buckets = listBuckets
     self.length = length

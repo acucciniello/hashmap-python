@@ -22,6 +22,7 @@ class LinkedList(object):
     self.current = self.head
     if self.head is None:
       self.head = node
+      return self.head
     else:
       while self.current.next != None:
         self.current = self.current.next
@@ -50,11 +51,16 @@ class LinkedList(object):
     else:
       while self.current != None:
         if self.current.data == value:
-          previous.next = self.current.next
-          self.current = None
-          return 'Node with the value: %d was removed from the hashmap' % value
+          if len(self) is 1:
+            previous = None
+            self.current = None
+            self.head = None
+          else:
+            previous.next = self.current.next
+            self.current = None
+          return 'Node with the value: %d was removed from the LinkedList' % value
         else:
           previous = self.current
           self.current = self.current.next
       return 'Node is not in LinkedList'
-      
+
